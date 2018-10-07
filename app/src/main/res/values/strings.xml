@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Google News</string>
+    <string name="all_news">All News</string>
+    <string name="favorites">Favorites</string>
+    <string name="no_favorite_news_yet">No Favorite News yet</string>
+</resources>

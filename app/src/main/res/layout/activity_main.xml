@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.raye7.news.presentation.home.NewsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/AppTheme.Toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/rotis_sansserif_std"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/toggle_background"
+                    android:checkedButton="@+id/allNewsBtn"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/allNewsBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_background"
+                        android:button="@null"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/all_news"
+                        android:textColor="@android:color/white" />
+
+                    <RadioButton
+                        android:id="@+id/favBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_background"
+                        android:button="@null"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/favorites"
+                        android:textColor="@android:color/white" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/page_title_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/colorPrimaryDark"
+            android:fontFamily="@font/rotis_sansserif_std"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/newsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/fav_placeholder_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/rotis_sansserif_std"
+                android:text="@string/no_favorite_news_yet"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
