@@ -1,5 +1,5 @@
 # News
-A sample app to show news using Retrofit2 and Realm DB
+A sample app to show news remotly and can cache what you like from this list using Retrofit2 and Realm DB
 
 Languages, libraries and tools used
 ---------------
